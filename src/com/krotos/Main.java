@@ -13,7 +13,6 @@ class Main {
         Map<String,Tournament> mapOfTournaments=new HashMap<>();
 
 
-
     }
 
     //get
