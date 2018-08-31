@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Tournament {
-    Random random=new Random();
+    private Random random=new Random();
 
     private String tournamentName;
     private Date dateOfTournament;
