@@ -11,9 +11,8 @@ import java.util.Map;
 class Main {
     public static void main(String[] args) {
 
-        List<Person> listOfPeople=new ArrayList<>();
-        //mapa <nazwa turnieju, turniej>
-        Map<String,Tournament> mapOfTournaments=new HashMap<>();
+        TestUI.start();
+
 
 
     }
