@@ -1,4 +1,6 @@
-package com.krotos;
+package com.krotos.domain;
+
+import com.krotos.domain.Player;
 
 import java.util.ArrayList;
 import java.util.List;

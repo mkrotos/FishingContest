@@ -1,5 +1,7 @@
-package com.krotos;
+package com.krotos.domain;
 
+
+import com.krotos.domain.Person;
 
 public class Player extends Person {
 
