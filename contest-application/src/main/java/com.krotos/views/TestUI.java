@@ -1,4 +1,4 @@
-package com.krotos;
+package com.krotos.views;
 
 import com.krotos.domain.PersonList;
 import com.krotos.domain.Tournament;
@@ -37,7 +37,7 @@ public class TestUI {
                     break;
                 case 2:
                     System.out.println("List of people");
-                    personList.printList();
+                    System.out.println(personList);
                     break;
                 case 3:
                     System.out.println("Nothing yet");

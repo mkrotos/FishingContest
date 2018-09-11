@@ -1,12 +1,6 @@
 package com.krotos;
 
-import com.krotos.domain.Person;
-import com.krotos.domain.Tournament;
-
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import com.krotos.views.TestUI;
 
 class Main {
     public static void main(String[] args) {

@@ -1,8 +1,6 @@
 package com.krotos.domain;
 
 import com.krotos.domain.Person;
-import com.krotos.domain.Player;
-import com.krotos.domain.Sector;
 
 import java.util.Date;
 import java.util.Random;

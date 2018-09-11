@@ -15,7 +15,12 @@ public class PersonList {
         return personList.get(index);
     }
 
-    public void printList(){
-        System.out.println(personList.toString());
+
+
+    @Override
+    public String toString() {
+        return "PersonList{" +
+                "personList=" + personList +
+                '}';
     }
 }
