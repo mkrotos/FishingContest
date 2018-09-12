@@ -2,6 +2,7 @@ package com.krotos;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -10,6 +11,11 @@ public class ExampleController {
     @RequestMapping("/example/model")
     public String exampleOfModel(Model model){
         model.addAttribute("message","This is very a important message");
+        return "glowny";
+    }
+
+    @RequestMapping("/example/people/{name}")
+    public String personDetails(@PathVariable("name") String name){
         return "glowny";
     }
 

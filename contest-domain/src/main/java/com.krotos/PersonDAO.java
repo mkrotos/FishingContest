@@ -4,18 +4,23 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class PersonDAO {
 
     private List<Person> personList=new ArrayList<>();
 
-    public void addPerson(String name, String surname){
-        personList.add(new Person(name,surname));
+    public PersonDAO() {
+        init();
     }
 
-    public Person getPerson(int index){
-        return personList.get(index);
+    public void addPerson(long id, String name, String surname){
+        personList.add(new Person(id,name,surname));
+    }
+
+    public Person getPerson(long id){
+        return personList.stream().filter(person -> person.getId()==id).findFirst().get();
     }
 
     public List<Person> getPersonList() {
@@ -31,8 +36,13 @@ public class PersonDAO {
 
     @Override
     public String toString() {
-        return "PersonDAO{" +
-                "personList=" + personList +
-                '}';
+        return personList.stream().map(person -> person.toString()+"\n").collect(Collectors.joining());
+    }
+
+    private void init(){
+        Person person1=new Person(10001,"Adam","Zamwi",32);
+        Person person2=new Person(10002,"Bart","Green",22);
+        personList.add(person1);
+        personList.add(person2);
     }
 }

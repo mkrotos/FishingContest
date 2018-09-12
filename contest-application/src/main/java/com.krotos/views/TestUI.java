@@ -28,11 +28,13 @@ public class TestUI {
 
             switch (choice) {
                 case 1:
+                    System.out.println("Type id:");
+                    long id = SCANNER.nextLong();
                     System.out.println("Type name:");
                     String name = SCANNER.next();
                     System.out.println("Type surname");
                     String surname = SCANNER.next();
-                    PERSON_DAO.addPerson(name, surname);
+                    PERSON_DAO.addPerson(id,name, surname);
                     System.out.println("Person added.");
                     break;
                 case 2:
