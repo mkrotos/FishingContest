@@ -1,4 +1,4 @@
-package webapp;
+package com.krotos;
 
 import com.krotos.PersonDAO;
 import org.springframework.beans.factory.annotation.Autowired;
