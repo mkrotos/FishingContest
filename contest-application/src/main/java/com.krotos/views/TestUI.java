@@ -1,7 +1,7 @@
 package com.krotos.views;
 
-import com.krotos.domain.PersonList;
-import com.krotos.domain.Tournament;
+import com.krotos.PersonDAO;
+import com.krotos.services.Tournament;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class TestUI {
 
-    private static final Scanner scanner = new Scanner(System.in);
-    private static final PersonList personList = new PersonList();
+    private static final Scanner SCANNER = new Scanner(System.in);
+    private static final PersonDAO PERSON_DAO = new PersonDAO();
     //mapa <nazwa turnieju, turniej>
     private static final Map<String, Tournament> mapOfTournaments = new HashMap<>();
 
@@ -24,20 +24,20 @@ public class TestUI {
                     "4 - go to tournament UI \n" +
                     "5 - exit");
 
-            int choice = scanner.nextInt();
+            int choice = SCANNER.nextInt();
 
             switch (choice) {
                 case 1:
                     System.out.println("Type name:");
-                    String name = scanner.next();
+                    String name = SCANNER.next();
                     System.out.println("Type surname");
-                    String surname = scanner.next();
-                    personList.addPerson(name, surname);
+                    String surname = SCANNER.next();
+                    PERSON_DAO.addPerson(name, surname);
                     System.out.println("Person added.");
                     break;
                 case 2:
                     System.out.println("List of people");
-                    System.out.println(personList);
+                    PERSON_DAO.dispList();
                     break;
                 case 3:
                     System.out.println("Nothing yet");

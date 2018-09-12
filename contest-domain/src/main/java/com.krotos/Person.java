@@ -1,4 +1,4 @@
-package com.krotos.domain;
+package com.krotos;
 
 public class Person {
 

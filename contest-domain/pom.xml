@@ -11,5 +11,19 @@
 
     <artifactId>contest-domain</artifactId>
 
+    <properties>
+        <org.springframework-spring-core-version>5.0.9.RELEASE</org.springframework-spring-core-version>
+    </properties>
+
+<dependencies>
+
+    <!-- Spring -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${org.springframework-spring-core-version}</version>
+    </dependency>
+
+</dependencies>
 
 </project>

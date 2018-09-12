@@ -1,6 +1,7 @@
-package com.krotos.domain;
+package com.krotos.services;
 
-import com.krotos.domain.Person;
+import com.krotos.Person;
+import com.krotos.Player;
 
 import java.util.Date;
 import java.util.Random;
@@ -33,20 +34,20 @@ public class Tournament {
         int index;
         for(Player player:listOfPlayers){
             index=random.nextInt(listOfPositions.size());
-            player.position=listOfPositions.get(index);
-            player.sector=mapOfPositions.get(player.position);
+            player.setPosition(listOfPositions.get(index));
+            player.setSector(mapOfPositions.get(player.getPosition()));
             listOfPositions.remove(index);
-            mapOfSectors.get(player.sector).addPlayer(player);
+            mapOfSectors.get(player.getSector()).addPlayer(player);
         }
     }
 
     //ustalenie ilosci punktow turniejowych
     public void countScores(){
         List<Player> listOfResults=new ArrayList<>(listOfPlayers);
-        listOfResults.sort((p1,p2)->p2.fishWeight.compareTo(p1.fishWeight));
-        listOfResults.sort((p1,p2)->p1.sectorScore.compareTo(p2.sectorScore));
+        listOfResults.sort((p1,p2)->p2.getFishWeight().compareTo(p1.getFishWeight()));
+        listOfResults.sort((p1,p2)->p1.getSectorScore().compareTo(p2.getSectorScore()));
         for(Player player:listOfResults){
-            player.tournamentScore=listOfResults.indexOf(player);
+            player.setTournamentScore(listOfResults.indexOf(player));
         }
     }
 

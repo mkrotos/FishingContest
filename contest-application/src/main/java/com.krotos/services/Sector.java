@@ -1,6 +1,6 @@
-package com.krotos.domain;
+package com.krotos.services;
 
-import com.krotos.domain.Player;
+import com.krotos.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +22,9 @@ public class Sector {
 
     //ustalanie ilosci punktow sektorowych
     public void countScores(){
-        listOfPlayers.sort((p1,p2)->p2.fishWeight.compareTo(p1.fishWeight));
+        listOfPlayers.sort((p1,p2)->p2.getFishWeight().compareTo(p1.getFishWeight()));
         for(Player player:listOfPlayers){
-            player.sectorScore=listOfPlayers.indexOf(player);
+            player.setSectorScore(listOfPlayers.indexOf(player));
         }
     }
 
