@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1>List of people in database</h1>
+
 <p>${list}</p>
 </body>
 </html>

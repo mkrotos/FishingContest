@@ -6,9 +6,9 @@ public class Person {
     private String name;
     private String surname;
     private Integer age;
-    private Character sex='-';
-    private Integer phoneNumber=0;
-    private String mail="";
+    private Character sex;
+    private Integer phoneNumber;
+    private String mail;
 
     public Person() {
     }
