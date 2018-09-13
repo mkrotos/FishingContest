@@ -21,5 +21,6 @@
 <p>Phone number: ${phoneNumber}</p>
 <p>Mail: ${mail}</p>
 
+<a href="/people">Back to list</a>
 </body>
 </html>

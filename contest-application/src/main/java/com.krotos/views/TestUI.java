@@ -1,6 +1,7 @@
 package com.krotos.views;
 
 import com.krotos.PersonDAO;
+import com.krotos.services.PersonDAOService;
 import com.krotos.services.Tournament;
 
 import java.util.HashMap;
@@ -11,6 +12,7 @@ public class TestUI {
 
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final PersonDAO PERSON_DAO = new PersonDAO();
+    private static final PersonDAOService PERSON_DAO_SERVICE = new PersonDAOService();
     //mapa <nazwa turnieju, turniej>
     private static final Map<String, Tournament> mapOfTournaments = new HashMap<>();
 
@@ -39,7 +41,7 @@ public class TestUI {
                     break;
                 case 2:
                     System.out.println("List of people");
-                    PERSON_DAO.dispList();
+                    PERSON_DAO_SERVICE.dispList();
                     break;
                 case 3:
                     System.out.println("Nothing yet");

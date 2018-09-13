@@ -48,6 +48,8 @@
     </form:form>
 
     <p>${message}</p>
+    <a href="/people">Back to list</a>
+
 </div>
 
 </body>

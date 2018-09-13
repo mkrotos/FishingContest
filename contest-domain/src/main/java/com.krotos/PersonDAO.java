@@ -22,19 +22,10 @@ public class PersonDAO {
         personList.add(person);
     }
 
-    public Person getPerson(long id){
-        return personList.stream().filter(person -> person.getId()==id).findFirst().get();
-    }
+
 
     public List<Person> getPersonList() {
         return personList;
-    }
-
-    public void dispList(){
-        for(int i=0;i<personList.size();i++){
-            System.out.println(i+": "+personList.get(i).getName()+" "+
-            personList.get(i).getSurname()+", age: "+personList.get(i).getAge());
-        }
     }
 
     @Override

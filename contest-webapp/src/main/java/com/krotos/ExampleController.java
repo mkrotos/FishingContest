@@ -14,8 +14,8 @@ public class ExampleController {
         return "glowny";
     }
 
-    @RequestMapping("/example/people/{name}")
-    public String personDetails(@PathVariable("name") String name){
+    @RequestMapping("/example/")
+    public String personDetails(){
         return "glowny";
     }
 

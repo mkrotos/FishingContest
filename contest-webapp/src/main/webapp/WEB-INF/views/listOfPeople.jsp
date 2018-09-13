@@ -14,5 +14,6 @@
 <h1>List of people in database</h1>
 
 <p>${list}</p>
+<a href="/people/addView">Add new</a>
 </body>
 </html>

@@ -1,6 +1,6 @@
 package com.krotos;
 
-import com.krotos.PersonDAO;
+import com.krotos.services.PersonDAOService;
 import com.krotos.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,6 +17,9 @@ public class PersonController {
     @Autowired
     private PersonDAO personDAO;
 
+    @Autowired
+    private PersonDAOService personDAOService;
+
 
     @RequestMapping("/people")
     public String listPeople(Model model) {
@@ -26,7 +29,7 @@ public class PersonController {
 
     @RequestMapping("people/{id}")
     public String personDetails(@PathVariable("id") long id, Model model) {
-        Person person = personDAO.getPerson(id);
+        Person person = personDAOService.getPersonById(id);
         Map<String,String> personDetailsMap=PersonService.mapPersonDetails(person);
         model.addAllAttributes(personDetailsMap);
 
@@ -46,6 +49,13 @@ public class PersonController {
             return "redirect:/people/addView";
         }
         personDAO.addPerson(person);
+        return "redirect:/people";
+    }
+
+    @RequestMapping(value = "people/{id}",method = RequestMethod.DELETE)
+    public String deletePerson(@PathVariable long id){
+        boolean succes=personDAOService.deletePersonById(id);
+
         return "redirect:/people";
     }
 
