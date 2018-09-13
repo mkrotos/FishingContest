@@ -10,7 +10,6 @@ public class PersonService {
         Map<String, String> personDetailsMap = new HashMap<>();
 
         try {
-            personDetailsMap.put("nameAndSurname", person.getName() + " " + person.getSurname());
             personDetailsMap.put("id", person.getId().toString());
             personDetailsMap.put("name", person.getName());
             personDetailsMap.put("surname", person.getSurname());
