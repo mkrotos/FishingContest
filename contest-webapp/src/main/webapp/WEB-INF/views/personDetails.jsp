@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Fishing Contest: ${name} ${Surname}</title>
+    <title>Fishing Contest: ${name} ${surname}</title>
 </head>
 <body>
-<h1>${name} ${Surname}</h1>
+<h1>${name} ${surname}</h1>
 
 <p>Id: ${id}</p>
 <p>Name: ${name}</p>

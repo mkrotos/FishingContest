@@ -3,11 +3,10 @@ package com.krotos;
 import com.krotos.PersonDAO;
 import com.krotos.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.Map;
@@ -42,8 +41,12 @@ public class PersonController {
     }
 
     @RequestMapping(value = "people/savePerson",method = RequestMethod.POST)
-    public void saveNewPerson(){
-
+    public String saveNewPerson(@ModelAttribute Person person){
+        if(person.getId()==null){
+            return "redirect:/people/addView";
+        }
+        personDAO.addPerson(person);
+        return "redirect:/people";
     }
 
 

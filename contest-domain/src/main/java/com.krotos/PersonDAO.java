@@ -18,6 +18,9 @@ public class PersonDAO {
     public void addPerson(long id, String name, String surname){
         personList.add(new Person(id,name,surname));
     }
+    public void addPerson(Person person){
+        personList.add(person);
+    }
 
     public Person getPerson(long id){
         return personList.stream().filter(person -> person.getId()==id).findFirst().get();

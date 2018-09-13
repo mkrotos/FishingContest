@@ -30,12 +30,12 @@
                 <td><form:input path="surname" /></td>
             </tr>
             <tr>
-                <td>Mail:</td>
-                <td><form:input path="mail" /></td>
-            </tr>
-            <tr>
                 <td>Age:</td>
                 <td><form:input path="age" /></td>
+            </tr>
+            <tr>
+                <td>Mail:</td>
+                <td><form:input path="mail" /></td>
             </tr>
             <tr>
                 <td>Phone:</td>
@@ -46,6 +46,8 @@
             </tr>
         </table>
     </form:form>
+
+    <p>${message}</p>
 </div>
 
 </body>
