@@ -20,6 +20,10 @@ public class PersonController {
     @Autowired
     private PersonDAOService personDAOService;
 
+    @RequestMapping("/")
+    public String personDetails() {
+        return "glowny";
+    }
 
     @RequestMapping("/people")
     public String listPeople(Model model) {
@@ -30,31 +34,32 @@ public class PersonController {
     @RequestMapping("people/{id}")
     public String personDetails(@PathVariable("id") long id, Model model) {
         Person person = personDAOService.getPersonById(id);
-        Map<String,String> personDetailsMap=PersonService.mapPersonDetails(person);
-        model.addAllAttributes(personDetailsMap);
+        Map<String, String> personDetailsMap = PersonService.mapPersonDetails(person);
+        //model.addAllAttributes(personDetailsMap);
+        model.addAttribute(person);
 
         return "personDetails";
     }
 
     @RequestMapping("people/addView")
-    public String showAddPersonView(Model model){
-        Person person=new Person();
-        model.addAttribute("person",person);
+    public String showAddPersonView(Model model) {
+        Person person = new Person();
+        model.addAttribute("person", person);
         return "addPerson";
     }
 
-    @RequestMapping(value = "people/savePerson",method = RequestMethod.POST)
-    public String saveNewPerson(@ModelAttribute Person person){
-        if(person.getId()==null){
+    @RequestMapping(value = "people/savePerson", method = RequestMethod.POST)
+    public String saveNewPerson(@ModelAttribute Person person) {
+        if (person.getId() == null) {
             return "redirect:/people/addView";
         }
         personDAO.addPerson(person);
         return "redirect:/people";
     }
 
-    @RequestMapping(value = "people/{id}/delete",method = RequestMethod.GET)
-    public String deletePerson(@PathVariable long id){
-        boolean succes=personDAOService.deletePersonById(id);
+    @RequestMapping(value = "people/{id}/delete", method = RequestMethod.GET)
+    public String deletePerson(@PathVariable long id) {
+        boolean succes = personDAOService.deletePersonById(id);
 
         return "redirect:/people";
     }

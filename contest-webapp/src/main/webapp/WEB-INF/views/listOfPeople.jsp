@@ -45,5 +45,8 @@
     </table>
 </c:if>
 
+<a href="/">Back to main page</a>
+
+
 </body>
 </html>

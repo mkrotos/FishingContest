@@ -8,18 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Fishing Contest: ${name} ${surname}</title>
+    <title>Fishing Contest: ${person.name} ${person.surname}</title>
 </head>
 <body>
-<h1>${name} ${surname}</h1>
+<h1>${person.name} ${person.surname}</h1>
 
-<p>Id: ${id}</p>
-<p>Name: ${name}</p>
-<p>Surname: ${surname}</p>
-<p>Age: ${age}</p>
-<p>Sex: ${sex}</p>
-<p>Phone number: ${phoneNumber}</p>
-<p>Mail: ${mail}</p>
+<p>Id: ${person.id}</p>
+<p>Name: ${person.name}</p>
+<p>Surname: ${person.surname}</p>
+<p>Age: ${person.age}</p>
+<p>Sex: ${person.sex}</p>
+<p>Phone number: ${person.phoneNumber}</p>
+<p>Mail: ${person.mail}</p>
 
 <a href="/people">Back to list</a>
 </body>
