@@ -12,34 +12,39 @@
     <title>Fishing Contest - add person</title>
 </head>
 <body>
+
+
 <div align="center">
     <h1>New Person</h1>
 
     <form:form action="savePerson" method="post" modelAttribute="person">
         <table>
+
             <tr>
                 <td>Id:</td>
-                <td><form:input path="id" /></td>
+
+                <td><form:input type="number"  path="id" required="required" /></td>
             </tr>
             <tr>
                 <td>Name:</td>
-                <td><form:input path="name" /></td>
+                <td><form:input type="text" path="name" required="required" /></td>
             </tr>
             <tr>
                 <td>Surname:</td>
-                <td><form:input path="surname" /></td>
+                <td><form:input type="text" path="surname" required="required" /></td>
             </tr>
             <tr>
                 <td>Age:</td>
-                <td><form:input path="age" /></td>
+                <td><form:input type="number" path="age" /></td>
             </tr>
             <tr>
                 <td>Mail:</td>
-                <td><form:input path="mail" /></td>
+                <td><form:input type="email" path="mail" /></td>
             </tr>
             <tr>
                 <td>Phone:</td>
-                <td><form:input path="phoneNumber" /></td>
+
+                <td><form:input  type="number" path="phoneNumber" /></td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><input type="submit" value="Save"></td>

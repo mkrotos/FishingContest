@@ -52,7 +52,7 @@ public class PersonController {
         return "redirect:/people";
     }
 
-    @RequestMapping(value = "people/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "people/{id}/delete",method = RequestMethod.GET)
     public String deletePerson(@PathVariable long id){
         boolean succes=personDAOService.deletePersonById(id);
 

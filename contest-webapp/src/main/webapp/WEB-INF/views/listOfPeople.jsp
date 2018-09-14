@@ -17,18 +17,18 @@
 <h1>List of people in database</h1>
 <a href="/people/addView">Add new</a>
 
-<p>${list}</p>
+
 <br>
 
 <c:if test="${!empty list}">
     <table border="1">
 
-        <th>Id</th>
-        <th>Name</th>
-        <th>Surname</th>
-        <th>Mail</th>
-        <th>Details</th>
-        <th>Delete</th>
+        <th width="80">Id</th>
+        <th width="120">Name</th>
+        <th width="120">Surname</th>
+        <th width="200">Mail</th>
+        <th width="80">Details</th>
+        <th width="80">Delete</th>
 
         <c:forEach var="person" items="${list}">
             <tr>
@@ -37,7 +37,7 @@
                 <td>${person.surname}</td>
                 <td>${person.mail}</td>
                 <td><a href="<c:url value="/people/${person.id}" />">Details</a></td>
-                <td><a href="<c:url value="/people/${person.id}" />">Delete</a></td>
+                <td><a href="<c:url value="/people/${person.id}/delete" />">Delete</a></td>
             </tr>
 
         </c:forEach>
