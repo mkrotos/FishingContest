@@ -23,7 +23,7 @@ public class PersonController {
 
     @RequestMapping("/people")
     public String listPeople(Model model) {
-        model.addAttribute("list", personDAO.toString());
+        model.addAttribute("list", personDAO.getPersonList());
         return "listOfPeople";
     }
 
