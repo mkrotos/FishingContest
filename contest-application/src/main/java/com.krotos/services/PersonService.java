@@ -1,32 +1,21 @@
 package com.krotos.services;
 
 import com.krotos.Person;
-
-import java.util.*;
+import com.krotos.PersonDTO;
 
 public class PersonService {
 
-    public static Map<String, String> mapPersonDetails(Person person) {
-        Map<String, String> personDetailsMap = new HashMap<>();
+    public static Person personFromDTO(PersonDTO personDTO){
+        Person person=new Person();
 
-        try {
-            personDetailsMap.put("id", person.getId().toString());
-            personDetailsMap.put("name", person.getName());
-            personDetailsMap.put("surname", person.getSurname());
-            personDetailsMap.put("age", person.getAge().toString());
-            personDetailsMap.put("sex", person.getSex().toString());
-            personDetailsMap.put("phoneNumber", person.getPhoneNumber().toString());
-            personDetailsMap.put("mail", Optional.ofNullable(person.getMail()).toString()); //??
-        } catch (NullPointerException e) {
-            //e.printStackTrace();
-            System.out.println( e.getClass().getSimpleName());
+        person.setId(personDTO.getId());
+        person.setName(personDTO.getName());
+        person.setSurname(personDTO.getSurname());
+        person.setAge(personDTO.getAge());
+        person.setSex(personDTO.getSex());
+        person.setMail(personDTO.getMail());
+        person.setPhoneNumber(personDTO.getPhoneNumber());
 
-
-        }
-
-        System.out.println(personDetailsMap);
-
-        return personDetailsMap;
+        return person;
     }
-
 }

@@ -22,29 +22,34 @@
 
             <tr>
                 <td>Id:</td>
-
-                <td><form:input type="number"  path="id" required="required" /></td>
+                <td><form:input type="number"  path="id" required="required" />
+                    <form:errors path="id" cssClass="error"/> </td>
             </tr>
             <tr>
                 <td>Name:</td>
-                <td><form:input type="text" path="name" required="required" /></td>
+                <td><form:input type="text" path="name" required="required" />
+                    <form:errors path="name" cssClass="error"/></td>
             </tr>
             <tr>
                 <td>Surname:</td>
-                <td><form:input type="text" path="surname" required="required" /></td>
+                <td><form:input type="text" path="surname" required="required" />
+                    <form:errors path="surname" cssClass="error"/></td>
             </tr>
             <tr>
                 <td>Age:</td>
-                <td><form:input type="number" path="age" /></td>
+                <td><form:input type="number" path="age" />
+                    <form:errors path="age" cssClass="error"/></td>
             </tr>
             <tr>
                 <td>Mail:</td>
-                <td><form:input type="email" path="mail" /></td>
+                <td><form:input type="email" path="mail" />
+                    <form:errors path="mail" cssClass="error"/></td>
             </tr>
             <tr>
                 <td>Phone:</td>
 
-                <td><form:input  type="number" path="phoneNumber" /></td>
+                <td><form:input  type="number" path="phoneNumber" />
+                    <form:errors path="phoneNumber" cssClass="error"/></td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><input type="submit" value="Save"></td>

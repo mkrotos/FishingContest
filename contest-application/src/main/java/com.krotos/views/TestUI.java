@@ -12,7 +12,7 @@ public class TestUI {
 
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final PersonDAO PERSON_DAO = new PersonDAO();
-    private static final PersonDAOService PERSON_DAO_SERVICE = new PersonDAOService();
+    private static final PersonDAOService PERSON_DAO_SERVICE = new PersonDAOService(PERSON_DAO);
     //mapa <nazwa turnieju, turniej>
     private static final Map<String, Tournament> mapOfTournaments = new HashMap<>();
 

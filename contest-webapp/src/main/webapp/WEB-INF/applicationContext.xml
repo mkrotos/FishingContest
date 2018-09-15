@@ -15,6 +15,9 @@
     <context:annotation-config/>
     <!-- To na przyszłość, pozwoli nam korzystać z adnotacji także w klasach, które byśmy skonfigurowali ręcznie -->
 
+    <mvc:annotation-driven />
+    <!-- To do obsługi walidacji pól -->
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/views/</value>

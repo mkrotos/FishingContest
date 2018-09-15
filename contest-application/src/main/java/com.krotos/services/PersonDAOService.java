@@ -11,8 +11,12 @@ import java.util.NoSuchElementException;
 @Service
 public class PersonDAOService {
 
+    private final PersonDAO personDAO;
+
     @Autowired
-    private PersonDAO personDAO;
+    public PersonDAOService(PersonDAO personDAO) {
+        this.personDAO = personDAO;
+    }
 
 
     public void dispList() {

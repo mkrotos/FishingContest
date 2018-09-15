@@ -2,14 +2,16 @@ package com.krotos;
 
 import com.krotos.services.PersonDAOService;
 import com.krotos.services.PersonService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-
-import java.util.Map;
+import javax.validation.Valid;
 
 @Controller
 public class PersonController {
@@ -19,6 +21,8 @@ public class PersonController {
 
     @Autowired
     private PersonDAOService personDAOService;
+
+    private final Logger log=LoggerFactory.getLogger(getClass());
 
     @RequestMapping("/")
     public String personDetails() {
@@ -34,8 +38,6 @@ public class PersonController {
     @RequestMapping("people/{id}")
     public String personDetails(@PathVariable("id") long id, Model model) {
         Person person = personDAOService.getPersonById(id);
-        Map<String, String> personDetailsMap = PersonService.mapPersonDetails(person);
-        //model.addAllAttributes(personDetailsMap);
         model.addAttribute(person);
 
         return "personDetails";
@@ -48,18 +50,22 @@ public class PersonController {
         return "addPerson";
     }
 
+
     @RequestMapping(value = "people/savePerson", method = RequestMethod.POST)
-    public String saveNewPerson(@ModelAttribute Person person) {
-        if (person.getId() == null) {
+    public String saveNewPerson(@ModelAttribute("person") @Valid PersonDTO personDTO, BindingResult result) {
+        log.info(personDTO.toString());
+        if (result.hasErrors()) {
             return "redirect:/people/addView";
         }
-        personDAO.addPerson(person);
+
+        personDAO.addPerson(PersonService.personFromDTO(personDTO));
         return "redirect:/people";
+
     }
 
     @RequestMapping(value = "people/{id}/delete", method = RequestMethod.GET)
     public String deletePerson(@PathVariable long id) {
-        boolean succes = personDAOService.deletePersonById(id);
+        boolean success = personDAOService.deletePersonById(id);
 
         return "redirect:/people";
     }
