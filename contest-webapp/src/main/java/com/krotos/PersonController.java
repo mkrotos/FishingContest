@@ -22,7 +22,7 @@ public class PersonController {
     @Autowired
     private PersonDAOService personDAOService;
 
-    private final Logger log=LoggerFactory.getLogger(getClass());
+    private static Logger log=LoggerFactory.getLogger(PersonController.class);
 
     @RequestMapping("/")
     public String personDetails() {

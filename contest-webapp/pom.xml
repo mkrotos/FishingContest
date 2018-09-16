@@ -12,12 +12,6 @@
     <artifactId>contest-webapp</artifactId>
     <packaging>pom</packaging>
 
-    <properties>
-        <org.springframework-spring-core-version>5.0.9.RELEASE</org.springframework-spring-core-version>
-        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
-
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.krotos</groupId>
@@ -62,6 +56,24 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.6.6</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/log4j/log4j -->
         <dependency>
             <groupId>log4j</groupId>
@@ -76,6 +88,12 @@
 
 
     </dependencies>
+
+    <properties>
+        <org.springframework-spring-core-version>5.0.9.RELEASE</org.springframework-spring-core-version>
+        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
+
+    </properties>
 
 
 </project>
