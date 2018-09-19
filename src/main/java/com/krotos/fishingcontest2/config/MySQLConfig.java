@@ -2,19 +2,15 @@ package com.krotos.fishingcontest2.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnResource;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-
 import javax.sql.DataSource;
-import java.util.Properties;
 
 @Configuration
-@PropertySource("datasource.properties")
+@PropertySource("mysql.properties")
 @ConditionalOnClass(DataSource.class)
 public class MySQLConfig {
 
