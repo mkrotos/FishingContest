@@ -1,9 +1,10 @@
 package com.krotos;
 
+
+
 import com.krotos.services.PersonDAOService;
 import com.krotos.services.PersonService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -22,7 +23,8 @@ public class PersonController {
     @Autowired
     private PersonDAOService personDAOService;
 
-    private static Logger log=LoggerFactory.getLogger(PersonController.class);
+    //private static Logger log=Logger.getLogger(PersonController.class);
+    private static Logger log=Logger.getLogger(PersonController.class);
 
     @RequestMapping("/")
     public String personDetails() {
