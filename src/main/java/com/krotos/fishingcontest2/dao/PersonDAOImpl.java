@@ -29,14 +29,17 @@ public class PersonDAOImpl implements PersonDAO {
     public void deletePerson(long id) {
         Person person=entityManager.find(Person.class,id);
         if(person!=null){
-            this.entityManager.detach(person);
+            this.entityManager.remove(person);
         }
     }
 
     @Override
-    public Person updatePerson(Person person) {
-        entityManager.merge(person);
-        return person;
+    public boolean updatePerson(Person person) {
+        if(!entityManager.contains(person)) {
+            entityManager.merge(person);
+            return true;
+        }
+        return false;
     }
 
     @Override

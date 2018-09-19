@@ -12,7 +12,7 @@ public interface PersonService {
 
     void deletePerson(long id);
 
-    Person updatePerson(Person person);
+    boolean updatePerson(Person person);
 
     Person getPerson(long id);
 }

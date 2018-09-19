@@ -21,6 +21,7 @@
     <form:form action="savePerson" method="post" modelAttribute="person">
         <table>
 
+            <form:hidden path="id"/>
 
             <tr>
                 <td>Name:</td>

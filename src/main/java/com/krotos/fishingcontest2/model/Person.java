@@ -14,7 +14,7 @@ public class Person {
     private String surname;
     private Integer age;
     private Character sex;
-    private Integer phoneNumber;
+    private String phoneNumber;
     private String mail;
 
     public Long getId() {
@@ -57,11 +57,11 @@ public class Person {
         this.sex = sex;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -32,7 +32,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Person updatePerson(Person person) {
+    public boolean updatePerson(Person person) {
         return personDAO.updatePerson(person);
     }
 
