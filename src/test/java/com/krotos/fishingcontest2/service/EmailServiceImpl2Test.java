@@ -1,21 +1,22 @@
 package com.krotos.fishingcontest2.service;
 
+import com.krotos.fishingcontest2.service.mail.EmailServiceImpl2;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class EmailService2Test {
+public class EmailServiceImpl2Test {
 
-    EmailService2 emailService;
+    EmailServiceImpl2 emailService;
 
     @Before
     public void beforeAll() {
-        emailService = new EmailService2();
+        emailService = new EmailServiceImpl2();
     }
 
     @Test
     public void sendEmail() {
-        String recipientEmail = "makropl14@gmail.com";
+        String recipientEmail = "krotos4test@gmail.com";
         String subject = "Subject: test 1";
         String some_content = "Some content";
 

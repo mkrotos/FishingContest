@@ -1,4 +1,4 @@
-package com.krotos.fishingcontest2.service;
+package com.krotos.fishingcontest2.service.mail;
 
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import java.util.Properties;
 
 
 @Service
-public class EmailService2 {
+public class EmailServiceImpl2 implements EmailService {
 
     protected String mailSmtpAuth = "true";
     protected String mailSmtpHost = "smtp.gmail.com";

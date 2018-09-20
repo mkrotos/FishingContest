@@ -1,4 +1,4 @@
-package com.krotos.fishingcontest2.service;
+package com.krotos.fishingcontest2.service.mail;
 
 import com.krotos.fishingcontest2.config.MailConfig;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +11,10 @@ import javax.mail.internet.MimeMessage;
 
 
 @Service
-public class EmailService {
+public class EmailServiceImpl  {
 
     @Autowired
     private MailConfig mailConfig;
-
 
     public boolean sendEmail(String recipientEmail, String subject, String content) {
 

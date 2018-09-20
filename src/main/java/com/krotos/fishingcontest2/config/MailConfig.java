@@ -12,7 +12,7 @@ import java.util.Properties;
 @PropertySource("mail.properties")
 public class MailConfig {
 
-    @Bean
+
     public Properties getProperties() {
         Properties properties = new Properties();
         System.out.println("+++++");
@@ -24,15 +24,15 @@ public class MailConfig {
         System.out.println("++++"+properties.stringPropertyNames());
         return properties;
     }
-    @Bean
+
     public  String getMailEmailFrom() {
         return mailEmailFrom;
     }
-    @Bean
+
     public  String getUsername() {
         return username;
     }
-    @Bean
+
     public  String getPassword() {
         return password;
     }
