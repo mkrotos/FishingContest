@@ -37,7 +37,14 @@ dependencies {
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     // https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper
+    //For html render
     compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.12'
+    // For mails
+    // https://mvnrepository.com/artifact/javax.mail/mail
+    compile group: 'javax.mail', name: 'mail', version: '1.4.7'
+    // https://mvnrepository.com/artifact/com.sun.mail/javax.mail
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+
 
 
 }

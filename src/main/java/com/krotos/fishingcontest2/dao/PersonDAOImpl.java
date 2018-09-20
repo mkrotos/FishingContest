@@ -1,16 +1,16 @@
 package com.krotos.fishingcontest2.dao;
 
 import com.krotos.fishingcontest2.model.Person;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
 public class PersonDAOImpl implements PersonDAO {
 
-    @Autowired
+    @PersistenceContext
     private EntityManager entityManager;
 
     @Override
