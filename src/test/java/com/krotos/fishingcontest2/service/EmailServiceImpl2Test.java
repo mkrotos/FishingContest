@@ -17,7 +17,7 @@ public class EmailServiceImpl2Test {
     @Test
     public void sendEmail() {
         String recipientEmail = "krotos4test@gmail.com";
-        String subject = "Subject: test 1";
+        String subject = "Subject: test 2";
         String some_content = "Some content";
 
         Assert.assertTrue(emailService.sendEmail(recipientEmail, subject, some_content));

@@ -9,7 +9,7 @@ import java.util.Properties;
 
 
 @Service
-public class EmailServiceImpl2 implements EmailService {
+public class EmailServiceImpl2  {
 
     protected String mailSmtpAuth = "true";
     protected String mailSmtpHost = "smtp.gmail.com";
