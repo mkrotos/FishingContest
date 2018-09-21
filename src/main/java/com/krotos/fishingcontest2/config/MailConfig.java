@@ -35,27 +35,27 @@ public class MailConfig {
     }
 
     @Value("${mail.smtp.auth}")
-    public String mailSmtpAuth;
+    private String mailSmtpAuth;
 
     @Value("${mail.smtp.starttls.enable}")
-    public String mailSmtpStarttlsEnable;
+    private String mailSmtpStarttlsEnable;
 
     @Value("${mail.smtp.host}")
-    public String mailSmtpHost;
+    private String mailSmtpHost;
 
     @Value("${mail.smtp.port}")
-    public String mailSmtpPort;
+    private String mailSmtpPort;
 
     @Value("${mail.smtp.ssl.trust}")
-    public String mailSmtpSslTrust;
+    private String mailSmtpSslTrust;
 
     @Value("${mail.emailFrom}")
-    public String mailEmailFrom;
+    private String mailEmailFrom;
 
     @Value("${mail.username}")
-    public String username;
+    private String username;
 
     @Value("${mail.password}")
-    public String password;
+    private String password;
 }
 

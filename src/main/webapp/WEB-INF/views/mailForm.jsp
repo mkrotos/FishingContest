@@ -22,11 +22,11 @@
 
             <tr>
                 <td>Subject:</td>
-                <td><form:input type="text" path="subject" required="required" />
+                <td><form:input size="40" type="text" path="subject" required="required" />
             </tr>
             <tr>
                 <td>Content:</td>
-                <td><form:input type="text" path="content" required="required" />
+                <td><form:input size="40" type="text" path="content" required="required" />
             </tr>
 
             <tr>

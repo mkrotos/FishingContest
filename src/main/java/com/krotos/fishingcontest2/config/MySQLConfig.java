@@ -19,7 +19,7 @@ public class MySQLConfig {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
         dataSource.setDriverClassName(databaseDriver);
-        dataSource.setUrl(databaseUrl);
+        dataSource.setUrl(databaseUrl+databaseUrlOptions);
         dataSource.setUsername(databaseUser);
         dataSource.setPassword(databasePassword);
 
@@ -29,6 +29,9 @@ public class MySQLConfig {
 
     @Value("${database.url}")
     private String databaseUrl;
+
+    @Value("${database.url.options}")
+    private String databaseUrlOptions;
 
     @Value("${database.driver}")
     private String databaseDriver;

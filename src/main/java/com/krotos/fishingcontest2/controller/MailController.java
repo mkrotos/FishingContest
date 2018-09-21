@@ -9,11 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
+
 @Controller
 public class MailController {
 
     @Autowired
     EmailService emailService;
+
+    //For choosing the second implementation:
+//    @Resource(name = "emailService2")
+//    EmailService emailService;
 
     @RequestMapping("/mail")
     public ModelAndView getEmailForm(ModelAndView model){

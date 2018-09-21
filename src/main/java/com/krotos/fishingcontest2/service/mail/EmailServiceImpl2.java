@@ -8,16 +8,16 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 
-@Service
-public class EmailServiceImpl2  {
+@Service("emailService2")
+public class EmailServiceImpl2 implements EmailService {
 
-    protected String mailSmtpAuth = "true";
-    protected String mailSmtpHost = "smtp.gmail.com";
-    protected int mailSmtpPort = 587;
-    protected String mailSmtpStarttlsEnable = "true";
-    protected String mailEmailFrom = "mail";
-    protected String username = "uss";
-    protected String password = "pass";
+    private final String mailSmtpAuth = "true";
+    private final String mailSmtpHost = "smtp.gmail.com";
+    private final int mailSmtpPort = 587;
+    private final String mailSmtpStarttlsEnable = "true";
+    private String mailEmailFrom = "mail";
+    private String username = "uss";
+    private String password = "pass";
 
 
     public boolean sendEmail(String recipientEmail, String subject, String content) {

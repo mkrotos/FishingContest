@@ -2,14 +2,15 @@ package com.krotos.fishingcontest2.service.mail;
 
 import com.krotos.fishingcontest2.config.MailConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-
 @Service
+@Primary
 public class EmailServiceImpl implements EmailService {
 
     @Autowired
@@ -39,8 +40,4 @@ public class EmailServiceImpl implements EmailService {
 
         return false;
     }
-
-
-
-
 }
