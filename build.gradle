@@ -44,6 +44,9 @@ dependencies {
     compile group: 'javax.mail', name: 'mail', version: '1.4.7'
     // https://mvnrepository.com/artifact/com.sun.mail/javax.mail
     compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+
 
 
 
