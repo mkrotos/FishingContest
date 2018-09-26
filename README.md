@@ -1,7 +1,7 @@
 # FishingContest
 It will help in organizing fishing competitions
 
-####Technologies used
+#### Technologies used
 - Gradle
 - Spring Boot
 - Spring MVC
