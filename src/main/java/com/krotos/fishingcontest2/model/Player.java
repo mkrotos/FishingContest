@@ -1,9 +1,6 @@
 package com.krotos.fishingcontest2.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Player {
@@ -16,7 +13,7 @@ public class Player {
     private double fishWeight;
     private int sectorScore;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Player player;
 
     @Override
